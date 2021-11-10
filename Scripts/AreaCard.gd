@@ -44,7 +44,7 @@ func _ready():
 			itemindex = Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data.size() - 1
 			$VBC/HBC/Cooldown.text = "Ready"
 
-func _process(delta):
+func _process(_delta):
 	$VBC/HBC/Cooldown.text = calculate_time_left(OS.get_unix_time())
 
 func _on_Done_pressed():
