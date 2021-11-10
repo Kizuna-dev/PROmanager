@@ -9,13 +9,15 @@ var indexcount = 0
 var exist = false
 
 func calculate_time_left(current_unix_time:int):
-	var time_left = (Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data[itemindex][2] + cooldown_sec) - current_unix_time
+	var time_left = (int(Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data[itemindex][2]) + cooldown_sec) - current_unix_time
 	var result := ""
 	if time_left <= 0:
 		result = "Ready"
 		$VBC/HBC/Done.visible = true
 		$VBC/HBC/Reset.visible = false
 	else:
+		$VBC/HBC/Done.visible = false
+		$VBC/HBC/Reset.visible = true
 		var hour = time_left / 3600
 		var minute = (time_left - (3600 * hour)) / 60
 		var second = time_left - (3600 * hour) - (60 * minute)
@@ -41,8 +43,7 @@ func _ready():
 		$VBC/HBC/Cooldown.text = "Ready"
 
 func _process(delta):
-	if $VBC/HBC/Cooldown.text != "Ready":
-		$VBC/HBC/Cooldown.text = calculate_time_left(OS.get_unix_time())
+	$VBC/HBC/Cooldown.text = calculate_time_left(OS.get_unix_time())
 
 func _on_Done_pressed():
 	Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data[itemindex] = [Action, areaName, OS.get_unix_time()]
