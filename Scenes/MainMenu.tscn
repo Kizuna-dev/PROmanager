@@ -345,3 +345,5 @@ size_flags_horizontal = 3
 
 [node name="AreaCard" parent="TabContainer/Dig Spots/SC/VBC/HBC10" instance=ExtResource( 4 )]
 areaName = "Route 211"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
