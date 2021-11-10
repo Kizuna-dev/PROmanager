@@ -24,7 +24,7 @@ var default_data = {
 			"username": "",
 			"server": "",
 			"user_data": []
-		},
+		}
 	]
 }
 

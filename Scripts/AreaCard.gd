@@ -26,21 +26,23 @@ func calculate_time_left(current_unix_time:int):
 
 func _ready():
 	$VBC/Area.text = areaName
-	for data in Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data:
-		if data.has(Action) && data.has(areaName):
-			exist = true
-			itemindex = indexcount
-			if str(data[2]) != "Ready":
-				$VBC/HBC/Cooldown.text = calculate_time_left(OS.get_unix_time())
-				$VBC/HBC/Done.visible = false
-				$VBC/HBC/Reset.visible = true
-			else:
-				$VBC/HBC/Cooldown.text = "Ready"
-		indexcount += 1
-	if !exist:
-		Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data.append([Action, areaName, "Ready"])
-		itemindex = Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data.size() - 1
-		$VBC/HBC/Cooldown.text = "Ready"
+	for profile in Datastore.get_data().Profiles:
+		indexcount = 0
+		for data in profile.user_data:
+			if data.has(Action) && data.has(areaName):
+				exist = true
+				itemindex = indexcount
+				if str(data[2]) != "Ready":
+					$VBC/HBC/Cooldown.text = calculate_time_left(OS.get_unix_time())
+					$VBC/HBC/Done.visible = false
+					$VBC/HBC/Reset.visible = true
+				else:
+					$VBC/HBC/Cooldown.text = "Ready"
+			indexcount += 1
+		if !exist:
+			profile.user_data.append([Action, areaName, "Ready"])
+			itemindex = Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].user_data.size() - 1
+			$VBC/HBC/Cooldown.text = "Ready"
 
 func _process(delta):
 	$VBC/HBC/Cooldown.text = calculate_time_left(OS.get_unix_time())
