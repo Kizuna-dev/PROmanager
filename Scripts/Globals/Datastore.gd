@@ -1,6 +1,7 @@
 extends Node
 
 const SAVE_LOCATION := "user://data.save"
+const DEBUG_SAVE_LOCATION := "user://debug_data.save"
 
 var default_data = {
 	"LastSelectedProfile": 0,
@@ -38,13 +39,19 @@ func get_data():
 
 func save_data():
 	var file = File.new()
-	file.open(SAVE_LOCATION, File.WRITE)
+	if OS.is_debug_build():
+		file.open(DEBUG_SAVE_LOCATION, File.WRITE)
+	else:
+		file.open(SAVE_LOCATION, File.WRITE)
 	file.store_string(var2str(_data))
 	file.close()
 
 func load_data():
 	var file = File.new()
-	file.open(SAVE_LOCATION, File.READ)
+	if OS.is_debug_build():
+		file.open(DEBUG_SAVE_LOCATION, File.READ)
+	else:
+		file.open(SAVE_LOCATION, File.READ)
 	var content = file.get_as_text()
 	file.close()
 	

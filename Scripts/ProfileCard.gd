@@ -28,3 +28,4 @@ func _on_ProfileCard_pressed():
 		Datastore.get_data().LastSelectedProfile = int(self.name)
 		Datastore.set_data(Datastore.get_data())
 		Datastore.save_data()
+		get_node("../../../../SelectedProfile").text = "Profile " + Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].username + " is selected"

@@ -86,7 +86,7 @@ margin_right = 776.0
 margin_bottom = 255.0
 alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/Profiles/VBC/CC/VBC"]
+[node name="SelectProfile" type="Label" parent="TabContainer/Profiles/VBC/CC/VBC"]
 margin_right = 624.0
 margin_bottom = 39.0
 text = "SELECT YOUR PROFILE"
@@ -117,6 +117,15 @@ margin_left = 474.0
 margin_right = 624.0
 margin_bottom = 200.0
 
+[node name="SelectedProfile" type="Label" parent="TabContainer/Profiles/VBC"]
+visible = false
+margin_top = 393.0
+margin_right = 928.0
+margin_bottom = 432.0
+text = "Profile X is selected"
+align = 1
+valign = 1
+
 [node name="VBC" type="VBoxContainer" parent="TabContainer/Profiles/VBC"]
 margin_top = 409.0
 margin_right = 928.0
@@ -144,21 +153,21 @@ text = "Update available!"
 
 [node name="VSeparator" type="VSeparator" parent="TabContainer/Profiles/VBC/VBC/HBC"]
 margin_left = 169.0
-margin_right = 623.0
+margin_right = 550.0
 margin_bottom = 51.0
 size_flags_horizontal = 3
 
 [node name="Wiki" type="Button" parent="TabContainer/Profiles/VBC/VBC/HBC"]
-margin_left = 631.0
-margin_right = 786.0
+margin_left = 558.0
+margin_right = 713.0
 margin_bottom = 51.0
 text = "PRO wiki"
 
 [node name="Discord" type="Button" parent="TabContainer/Profiles/VBC/VBC/HBC"]
-margin_left = 794.0
+margin_left = 721.0
 margin_right = 928.0
 margin_bottom = 51.0
-text = "Discord"
+text = "PRO Discord"
 
 [node name="Dig Spots" type="MarginContainer" parent="TabContainer"]
 visible = false
@@ -356,3 +365,5 @@ areaName = "Route 211"
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [connection signal="pressed" from="TabContainer/Profiles/VBC/VBC/HBC/Update" to="." method="_on_Update_pressed"]
+[connection signal="pressed" from="TabContainer/Profiles/VBC/VBC/HBC/Wiki" to="." method="_on_Wiki_pressed"]
+[connection signal="pressed" from="TabContainer/Profiles/VBC/VBC/HBC/Discord" to="." method="_on_Discord_pressed"]
