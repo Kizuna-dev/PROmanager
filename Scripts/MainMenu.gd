@@ -1,6 +1,6 @@
 extends Control
 
-var Version := "0.3"
+var Version := "0.4"
 var UpdatedVersion := ""
 var FirstRequest := true
 

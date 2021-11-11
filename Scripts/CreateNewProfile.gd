@@ -29,6 +29,7 @@ func _on_Create_pressed():
 		Datastore.save_data()
 	get_node(selected_profile.get_path())._ready()
 	get_node("/root/MainMenu/TabContainer").tabs_visible = true
+	get_node("/root/MainMenu/TabContainer/Profiles/VBC/SelectedProfile").text = "Profile " + Datastore.get_data().Profiles[Datastore.get_data().LastSelectedProfile].username + " is selected"
 	self.queue_free()
 
 func _on_Back_pressed():
