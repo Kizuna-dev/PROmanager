@@ -362,6 +362,233 @@ size_flags_horizontal = 3
 [node name="AreaCard" parent="TabContainer/Dig Spots/SC/VBC/HBC10" instance=ExtResource( 4 )]
 areaName = "Route 211"
 
+[node name="Pokéstops" type="MarginContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 4
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+
+[node name="SC" type="ScrollContainer" parent="TabContainer/Pokéstops"]
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 988.0
+margin_bottom = 704.0
+
+[node name="VBC" type="VBoxContainer" parent="TabContainer/Pokéstops/SC"]
+margin_right = 956.0
+margin_bottom = 1274.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Kanto" type="Label" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_right = 932.0
+margin_bottom = 39.0
+text = "Kanto"
+
+[node name="HBC1" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 47.0
+margin_right = 932.0
+margin_bottom = 147.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC1" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Viridian City Gym"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC1" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Viridian Forest"
+cooldown_sec = 172800
+
+[node name="HBC2" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 155.0
+margin_right = 932.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC2" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Pewter City Museum"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC2" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Mt. Moon entrance at Route 3"
+cooldown_sec = 172800
+
+[node name="HBC3" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 263.0
+margin_right = 932.0
+margin_bottom = 363.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC3" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Cerulean Cave entrance"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC3" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Bill's house on Route 25"
+cooldown_sec = 172800
+
+[node name="HBC4" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 371.0
+margin_right = 932.0
+margin_bottom = 471.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC4" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Daycare Center on Route 5"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC4" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Power Plant on Route 10"
+cooldown_sec = 172800
+
+[node name="HBC5" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 479.0
+margin_right = 932.0
+margin_bottom = 579.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC5" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Rock Tunnel on Route 10"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC5" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Diglett's Cave Entrance 2"
+cooldown_sec = 172800
+
+[node name="HBC6" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 587.0
+margin_right = 932.0
+margin_bottom = 687.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC6" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Vermillion City dock"
+cooldown_sec = 172800
+
+[node name="Johto" type="Label" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 695.0
+margin_right = 932.0
+margin_bottom = 734.0
+text = "Johto"
+
+[node name="HBC7" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 742.0
+margin_right = 932.0
+margin_bottom = 842.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC7" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Sprout Tower iin Violet City"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC7" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Union Cave from Route 32"
+cooldown_sec = 172800
+
+[node name="HBC8" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 850.0
+margin_right = 932.0
+margin_bottom = 950.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC8" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Slowpoke Well in Azalea Town"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC8" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Ilex Forest"
+cooldown_sec = 172800
+
+[node name="HBC9" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 958.0
+margin_right = 932.0
+margin_bottom = 1058.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC9" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "National Park"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC9" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Burned Tower in Ecruteak City"
+cooldown_sec = 172800
+
+[node name="HBC10" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 1066.0
+margin_right = 932.0
+margin_bottom = 1166.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC10" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Glitter Lighthouse"
+cooldown_sec = 172800
+
+[node name="AreaCard2" parent="TabContainer/Pokéstops/SC/VBC/HBC10" instance=ExtResource( 4 )]
+margin_left = 468.0
+margin_right = 928.0
+Action = "Pokestop"
+areaName = "Dark Cave on Route 45"
+cooldown_sec = 172800
+
+[node name="HBC11" type="HBoxContainer" parent="TabContainer/Pokéstops/SC/VBC"]
+margin_top = 1174.0
+margin_right = 932.0
+margin_bottom = 1274.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+
+[node name="AreaCard" parent="TabContainer/Pokéstops/SC/VBC/HBC11" instance=ExtResource( 4 )]
+Action = "Pokestop"
+areaName = "Lake Of Rage"
+cooldown_sec = 172800
+
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [connection signal="pressed" from="TabContainer/Profiles/VBC/VBC/HBC/Update" to="." method="_on_Update_pressed"]

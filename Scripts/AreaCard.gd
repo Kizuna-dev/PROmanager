@@ -1,6 +1,6 @@
 extends Panel
 
-export(String, "Dig", "Tree") var Action
+export(String, "Dig", "Tree", "Pokestop") var Action
 export var areaName := "Route 1"
 export var cooldown_sec := 259200
 
